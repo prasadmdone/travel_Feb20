@@ -1,0 +1,166 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: book_tick
+  examples: |
+    - i want your help in booking tickets
+    - help me book tickets
+    - need help in booking tickets
+    - can u book tickets for me from [london](boa) to [usa](dest)
+    - book tickets for me for vacation
+
+- intent: Name
+  examples: |
+    - my name is [saurav kumar] (name)
+    - im [rahul singh] (name)
+    - [ravi singh](name)
+    - [kiran](name)
+    - [sai](name)
+    - [himanshu dutt](name)
+    - [akshay kumar](name)
+    - [ram prasad](name)
+    - [sony singh](name)
+    - [Narendra Modi](name)
+    - [Sandeep Dass](name)
+    - [Satya sri](name)
+    - [jeevan khan](name)
+    - [Srinivas Kumar](name)
+    - [rohith](name)
+    
+- intent: Phone
+  examples: |
+    - 9999444400
+    - 9955662233
+    - 8876996611
+    - 1234567890
+    - 9999999999
+    - 8888888888
+    - 6098980789
+    - 9820909009
+    - 9898989898
+
+- intent: Location
+  examples: |
+    - Netaji Subhash Chandra Bose International Airport, Kolkata
+    - Chennai International Airport, Chennai
+    - Thiruvananthapuram International Airport
+    - Sardar Vallabh Bhai Patel International Airport, Ahmedabad
+    - Guru Ram Dass Jee International Airport, Amritsar
+    - Lokpriya Gopinath Bordoloi International Airport, Guwahati
+    - Goa International Airport (Civil Enclave)
+    - Srinagar International Airport, Srinagar (Civil Enclave)
+    - Jaipur International Airport
+    - Kozhikode Airport, Calicut
+    - Veer Savarkar International Airport (Civil Enclave), Port Blair, A&N Islands (UT)
+    - Indira Gandhi International Airport, Delhi
+    - Chattrapati Shivaji International Airport, Mumbai
+    - GMR Hyderabad International Airport, Hyderabad
+    - Bangalore International Airport Limited, Bengaluru
+    - Cochin International Airport, Kochi (Private) 
+    - Bharat Ratna Babasaheb Dr. B.R. Ambedkar International Airport, Nagpur (Maharashtra)
+    - Maharashtra
+    - Delhi 
+    - kolkata
+    - lucknow
+    - bangalore
+    - mumbai
+- intent: Dates
+  examples: |
+    - [01/01/2015](date)
+    - [21/03/2014](date)
+    - [11/06/2018](date)
+    - [08/03/2022](date)
+    - [05/003/2015](date)
+    - [05/03/2015](date)
+    - [25/03/2015](date)
+    - [02/02/2015](date)
+  

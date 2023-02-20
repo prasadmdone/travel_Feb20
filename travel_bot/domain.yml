@@ -1,0 +1,194 @@
+version: '3.1'
+intents:
+- Dates
+- Location
+- Name
+- Phone
+- affirm
+- book_tick
+- bot_challenge
+- deny
+- email
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- nlu_fallback
+- otp
+- continue
+entities:
+- date
+- phone
+- city:
+    roles:
+    - departure
+    - destination
+- name
+- mail
+- code
+slots:
+  bor:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: city
+      role: departure
+    - type: from_entity
+      entity: city
+  dest:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: city
+      role: destination
+    - type: from_entity
+      entity: city
+  bordate:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: date
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  phone:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: phone
+  mail:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: mail
+  code:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: code
+forms:
+  travel_info:
+    required_slots:
+    - bor
+    - dest
+    - bordate
+  user_info:
+    required_slots:
+    - name
+    - phone
+responses:
+  utter_greet:
+  - text: Welcome Im Travelbot in your service.
+  utter_excited:
+  - text: Excited to go on vacation?
+  utter_helpbook:
+  - text: Would you like me to help you book tickets?
+    buttons:
+    - title: Yes
+      payload: /book_tick
+    - title: No
+      payload: /deny
+  utter_sure:
+  - text: Sure
+  utter_ask_bor:
+  - text: From Where to where do you want to fly?
+  utter_destination:
+  - text: What is your destination?
+  utter_cool:
+  - text: Cool
+  utter_ask_bordate:
+  - text: When are you planning to travel?
+  utter_return:
+  - text: Would you like me to book a return ticket as well?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_re_date:
+  - text: Ok. Which date do you wish to return?
+  utter_det:
+  - text: Please share some details so that I can show you lowest price flight options for your trip.
+  utter_ask_phone:
+  - text: "What's your mobile number? (ex: +919283293281)"
+  utter_ask_name:
+  - text: What's your name?
+  utter_thanks_name:
+  - text: Thanks {name}
+  utter_confirmation:
+  - text: 'You will soon receive a callback from my team and they will share details about the best flight options we have. '
+  utter_hurry:
+  - text: If you are in hurry, you can give us a call at +91-9000090000
+  utter_again:
+  - text: Restart
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_thanks_use:
+  - text: Thanks for using us.
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot.
+  utter_repeatotp:
+  - text: Can you please repeat otp.
+  utter_otp:
+  - text: Did you recieve otp?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_approve:
+  - text: You have successfully registered with us.
+  utter_changeph:
+  - text: Do you wish to change phone numbers?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_info:
+  - text: you want to book flight from {bor} to {dest} on {bordate}.
+  utter_email:
+  - text: Before we continue any further what can you pls give us your email.
+  utter_cc:
+  - text: DO you wish to
+    buttons:
+    - title: Change the Phone number📳?
+      payload: change my phone number
+    - title: Continue to otp
+      payload: continue to otp
+actions:
+- utter_cc
+- action_add_data
+- action_calendar
+- action_greetcarousel
+- action_ports
+- action_send
+- action_submit
+- action_verify
+- utter_again
+- utter_ask_bor
+- utter_ask_bordate
+- utter_ask_name
+- utter_ask_phone
+- utter_confirmation
+- utter_cool
+- utter_det
+- utter_email
+- utter_goodbye
+- utter_greet
+- utter_helpbook
+- utter_hurry
+- utter_info
+- utter_return
+- utter_sure
+- utter_thanks_name
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

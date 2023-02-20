@@ -1,0 +1,53 @@
+version: "3.1"
+stories:
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_helpbook
+  - intent: book_tick
+  - action: travel_info
+  - active_loop: travel_info
+  - slot_was_set:
+    - requested_slot: bor
+  - slot_was_set:
+    - bor: shimla
+  - slot_was_set:
+    - dest: goa
+  - slot_was_set:
+    - requested_slot: bordate
+  - slot_was_set:
+    - bordate: 01-01-2023
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: utter_cool
+  - action: utter_det
+  - action: utter_email
+  - intent: email
+    entities:
+    - mail: saurav@gmail.com
+  - action: utter_ask_name
+  - intent: Name
+    entities:
+    - name: saurav
+  - slot_was_set:
+    - name: saurav
+  - action: utter_ask_phone
+  - intent: Phone
+    entities:
+    - phone: '+918299844405'
+  - slot_was_set:
+    - phone: '+918299844405'
+  - action: action_send
+  - action: utter_cc
+  - intent: continue
+  - intent: otp
+    entities:
+    - code: '123462'
+  - slot_was_set:
+    - code: '123462'
+  - action: action_verify
+

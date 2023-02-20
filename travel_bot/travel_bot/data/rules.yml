@@ -1,0 +1,40 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+- rule: approved
+  steps:
+  - action: utter_approve
+  - action: action_add_data
+  - action: utter_confirmation
+  - action: utter_hurry
+  - action: utter_again
+
+
+# - rule: Activate form 1
+#   steps:
+#   - intent: book_tick
+#   - action: travel_info
+#   - active_loop: travel_info
+
+# - rule: submit form
+#   condition:
+#   - active_loop: travel_info
+#   steps:
+#   - action: travel_info
+#   - active_loop: null 
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_submit
+#   - action: utter_cool

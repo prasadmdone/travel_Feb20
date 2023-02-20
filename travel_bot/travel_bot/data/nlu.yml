@@ -1,0 +1,310 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hi im [rohan](name)
+    - hello my name is [arjun](name) how are you?
+    - hi im [saurav](name) and i wanna book tikets from [delhi](city) to [kolkata](city)
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: book_tick
+  examples: |
+    - i want your help in booking tickets
+    - help me book tickets
+    - need help in booking tickets
+    - can u book tickets for me from [london](city) to [usa](city)
+    - book tickets for me for vacation
+- intent: Name
+  examples: |
+    - my name is [saurav] (name)
+    - im [rahul singh] (name)
+    - [ravi singh](name)
+    - [kiran](name)
+    - [sai](name)
+    - [himanshu dutt](name)
+    - [akshay kumar](name)
+    - [ram prasad](name)
+    - [sony singh](name)
+    - [Narendra Modi](name)
+    - [Sandeep Dass](name)
+    - [Satya sri](name)
+    - [jeevan khan](name)
+    - [Srinivas Kumar](name)
+    - [rohith](name)
+    - [saurav](name)
+    - [saurav](name)
+- intent: Phone
+  examples: |
+    - [+911234567890](phone)
+    - [+919999999999](phone)
+    - [+918888888888](phone)
+    - [+019203291221](phone)
+    - [+449205429823](phone)
+    - [+448205429823](phone)
+    - [+011234567890](phone)
+    - [+919196000000](phone)
+    - [+919196000001](phone)
+    - [+919196000002](phone)
+    - [+019196000052](phone)
+    - [+449196000000](phone)
+    - [+449196000001](phone)
+    - [+019196000085](phone)
+    - [+918765300001](phone)
+    - [+918765300002](phone)
+    - [+918765300400](phone)
+    - [+018765305000](phone)
+    - [+448765300008](phone)
+    - [+448765300090](phone)
+    - [+018765300210](phone)
+    - [+919453399999](phone)
+    - [+919453300000](phone)
+    - [+919453300001](phone)
+    - [+019453300009](phone)
+    - [+449453303000](phone)
+    - [+449453300010](phone)
+    - [+019453300000](phone)
+    - [+917839500000](phone)
+    - [+917839500002](phone)
+    - [+917839500009](phone)
+    - [+017839500012](phone)
+    - [+447839500000](phone)
+    - [+447839500100](phone)
+    - [+017839500000](phone)
+    - [+018887900000](phone)
+    - [+918887900001](phone)
+    - [+918887900003](phone)
+    - [+918887900005](phone)
+    - [+018887900008](phone)
+    - [+448887900013](phone)
+    - [+448887900017](phone)
+    - [+018887900019](phone)
+    - [+918887900023](phone)
+    - [+918887900029](phone)
+    - [+918887900031](phone)
+    - [+018887900037](phone)
+    - [+448887900041](phone)
+    - [+448887900043](phone)
+    - [+018887900047](phone)
+    - [+918299844405](phone)
+    - [+919796676786](phone)
+    - [+919999888899](phone)
+    - [+919452958391](phone)
+    - [+919283293281](phone)
+    - [+919283293281](phone)
+- intent: otp
+  examples: |
+    - [231434] (code)
+    - [673453] (code)
+    - [923424] (code)
+    - [128978] (code)
+    - [967356] (code)
+    - [231000] (code)
+    - [231001] (code)
+    - [231002] (code)
+    - [231003] (code)
+    - [231004] (code)
+    - [296000] (code)
+    - [296001] (code)
+    - [296002] (code)
+    - [296003] (code)
+    - [296005] (code)
+    - [168000] (code)
+    - [168003] (code)
+    - [168005] (code)
+    - [168007] (code)
+    - [168009] (code)
+    - [810000] (code)
+    - [810001] (code)
+    - [810005] (code)
+    - [810009] (code)
+    - [810015] (code)
+    - [795100] (code)
+    - [795111] (code)
+    - [795113] (code)
+    - [795119] (code)
+    - [795123] (code)
+    - [441000] (code)
+    - [441009] (code)
+    - [441018] (code)
+    - [441027] (code)
+    - [441036] (code)
+    - [010201] (code)
+    - [010404] (code)
+    - [010609] (code)
+    - [010816] (code)
+    - [011025] (code)
+    - [011236] (code)
+    - [011449] (code)
+    - [011664] (code)
+    - [011881] (code)
+    - [012100] (code)
+    - [012321] (code)
+    - [012544] (code)
+    - [012769] (code)
+    - [012996] (code)
+    - [013225] (code)
+    - [010201](code)
+    - [785621](code)
+    - [789465](code)
+    - [967356](code)
+    - [123462](code)
+    - [789456](code)
+- intent: Location
+  examples: |
+    - I want to fly from [Berlin]{"entity": "city", "role": "departure"} to [San Francisco]{"entity": "city", "role": "destination"}.
+    - I want to fly from [Chennai]{"entity": "city", "role": "departure"} to [Bengaluru]{"entity": "city", "role": "destination"}.
+    - I want to fly from [Ahmedabad]{"entity": "city", "role": "departure"} to [Jaipur]{"entity": "city", "role": "destination"}.
+    - I want to fly from [delhi]{"entity": "city", "role": "departure"} to [Goa]{"entity": "city", "role": "destination"}.
+    - I want to fly from [Guwahati]{"entity": "city", "role": "departure"} to [mumbai]{"entity": "city", "role": "destination"}.
+    - I want to fly from [kanpur]{"entity": "city", "role": "departure"} to [lucknow]{"entity": "city", "role": "destination"}.
+    - from [Shimla]{"entity": "city", "role": "departure"} to [Jharkhand]{"entity": "city", "role": "destination"}.
+    - Book a flight from [Shimla]{"entity": "city", "role": "departure"} to [delhi]{"entity": "city", "role": "destination"}
+    - [Karnataka]{"entity": "city", "role": "departure"} to [Jharkhand]{"entity": "city", "role": "destination"}.
+    - i want to fly from [shimla]{"entity": "city", "role": "departure"} to [lucknow]{"entity": "city", "role": "destination"}
+    - i want to fly from [chennai]{"entity": "city", "role": "departure"} to [bengaluru]{"entity": "city", "role": "destination"}
+    - Book a flight from [shimla]{"entity": "city", "role": "departure"} to [delhi]{"entity": "city", "role": "destination"}
+    - from [shimla]{"entity": "city", "role": "departure"} to [delhi]{"entity": "city", "role": "destination"}
+    - from [kanpur]{"entity": "city", "role": "departure"} to [lucknow]{"entity": "city", "role": "destination"}
+    - [shimla]{"entity": "city", "role": "departure"} to [goa]{"entity": "city", "role": "destination"}
+- intent: Dates
+  examples: |
+    - [01/01/2015](date)
+    - [21/03/2014](date)
+    - [11/06/2018](date)
+    - [08/03/2022](date)
+    - [05/003/2015](date)
+    - [05/03/2015](date)
+    - [25/03/2015](date)
+    - [02/02/2015](date)
+    - [February 17, 2009](date)
+    - [Feb172009](date)
+    - [17Feb2009](date)
+    - [17 januray, 2009](date)
+    - [17 February, 2009](date)
+    - [17 march, 2009](date)
+    - [17 april, 2009](date)
+    - [17 may, 2009](date)
+    - [17 june, 2009](date)
+    - [17 july, 2009](date)
+    - [17 august, 2009](date)
+    - [17 september, 2009](date)
+    - [17 october, 2009](date)
+    - [17 november, 2009](date)
+    - [17 december, 2009](date)
+    - [17 Feb, 2014](date)
+    - [17 jan, 2014](date)
+    - [17 mar, 2014](date)
+    - [17 apr, 2014](date)
+    - [17 may, 2014](date)
+    - [17 jun, 2014](date)
+    - [17 jul, 2014](date)
+    - [17 aug, 2014](date)
+    - [17 sep, 2014](date)
+    - [17 oct, 2014](date)
+    - [17 nov, 2014](date)
+    - [17 dec, 2014](date)
+    - [01-01-2015](date)
+    - [21-03-2014](date)
+    - [11-06-2018](date)
+    - [08-03-2022](date)
+    - [05-03-2015](date)
+    - [25-03-2015](date)
+    - [02-02-2015](date)
+    - [01/02/2023](date)
+    - [February 17](date), [2009](date)
+    - [05/02/2023](date)
+    - [01-01-2023](date)
+- intent: email
+  examples: |
+    - [kris@yahooo.com](mail)
+    - [hemant@gmail.com](mail)
+    - [saurav@gmail.com](mail)
+    - [kaka@gmail.com](mail)
+    - [raj123@gmail.com](mail)
+    - [sk1243@gmail.com](mail)
+    - [risk@yahooo.com](mail)
+    - [saurav@gmail.com](mail)
+- intent: continue
+  examples: |
+    - i want to continue to otp
+    - i want to proceed
+    - lets proceed to otp
+    - continue to otp

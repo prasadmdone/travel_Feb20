@@ -1,0 +1,112 @@
+version: "3.1"
+
+stories:
+
+- story: greet+ book ticket+ deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_helpbook
+  - intent: deny
+  - action: utter_sure
+  - action: utter_thanks_use
+  - action: utter_again
+
+- story: greet+ book ticket+ deny + restart
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_helpbook
+  - intent: deny
+  - action: utter_sure
+  - action: utter_thanks_use
+  - action: utter_again
+  - intent: affirm
+  - action: utter_greet
+  - action: utter_helpbook
+
+- story: book ticket+ deny
+  steps:
+  - intent: book_tick
+  - action: utter_helpbook
+  - intent: deny
+  - action: utter_sure
+  - action: utter_thanks_use
+  - action: utter_again
+
+- story: book ticket+ deny + restart
+  steps:
+  - intent: book_tick
+  - action: utter_helpbook
+  - intent: deny
+  - action: utter_sure
+  - action: utter_thanks_use
+  - action: utter_again
+  - intent: affirm
+  - action: utter_greet
+  - action: utter_helpbook
+
+- story: greet+ book ticket+ affirm + return
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_helpbook
+  - intent: affirm
+  - action: utter_sure
+  - action: utter_boarding
+  - intent: Location
+  - action: utter_destination
+  - intent: Location
+  - action: utter_cool
+  - action: utter_bo_date
+  - intent: Dates
+    entities: 
+      - date: "01/02/2023"
+  - action: utter_return
+  - intent: affirm
+  - action: utter_re_date
+  - intent: Dates
+    entities: 
+      - date: "05/02/2023"
+  - action: utter_det
+  - action: utter_phone
+  - intent: Phone
+  - action: utter_name
+  - intent: Name
+    entities: 
+      - name: saurav kumar
+  - action: utter_thanks_name
+  - action: utter_confirmation
+  - action: utter_hurry
+  - action: utter_again
+
+- story: greet+ book ticket+ affirm + deny return
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_helpbook
+  - intent: affirm
+  - action: utter_sure
+  - action: utter_boarding
+  - intent: Location
+  - action: utter_destination
+  - intent: Location
+  - action: utter_cool
+  - action: utter_bo_date
+  - intent: Dates
+    entities: 
+      - date: "01/02/2023"
+  - action: utter_return
+  - intent: deny
+  - action: utter_cool
+  - action: utter_det
+  - action: utter_phone
+  - intent: Phone
+  - action: utter_name
+  - intent: Name
+    entities: 
+      - name: saurav kumar
+  - action: utter_thanks_name
+  - action: utter_confirmation
+  - action: utter_hurry
+  - action: utter_again
